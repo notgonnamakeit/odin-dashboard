@@ -1,0 +1,27 @@
+body {
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) 1fr;
+    grid-template-rows: auto auto;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+.content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.content .projects {
+    grid-row: span 2;
+}
+
+.content .cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
